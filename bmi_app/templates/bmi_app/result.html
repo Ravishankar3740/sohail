@@ -1,0 +1,27 @@
+<html>
+    <head>
+        
+        <title>Student Results</title>
+        
+    </head>
+    <body>        
+            <fieldset style="width:600px">
+                <legend><b>Your BMI Result:</b></legend>
+                <b>Name: {{form_data.name}}</b> <br> 
+                  
+                <b>Gender: {{form_data.gender}}</b> <br>
+                <b>Age: {{form_data.age}}</b> <br>
+                <hr>
+                <br>
+                <table border="1">
+                    <tr><td><b>Height :</b></td><td><b>{{form_data.height}} cm</b></td></tr>
+                    <tr><td><b>Weight:</b></td><td><b>{{form_data.weight}} kg</b></td></tr>
+                    <tr><td><b>BMI:</b></td><td><b>{{bmi}} kg/m²</b></td></tr>
+                    <tr><td><b>Status:</b></td><td><b>{{result}}</b></td></tr>             
+                </table><br/><br/>
+                <a href = "{% url 'bmi' %}" >Calculate Again</a>
+            </fieldset>
+            
+            
+    </body>
+</html>

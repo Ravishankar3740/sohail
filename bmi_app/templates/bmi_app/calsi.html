@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<!-- Include JS files -->
+	<script src="app.js"></script>
+
+	<style>
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+} 	
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<h1> 
+            <b>
+                BMI CALCULATOR
+            </b>
+        </h1>
+		<form action="{% url 'bmi_calculations' %}" method="POST">
+			<!-- Option for providing height
+			and weight to the user-->
+            <p>Name:-</p> 
+
+		<input type="text"placeholder="Enter Your name" name ="name" value="" required>
+
+        <p>Age:-</p>
+
+		<input type="number"placeholder="Enter Your Age " name ="age"  value="" required>
+
+        <p>Gender:-</p>
+
+		<input type="radio" id="html" name="gender" value="Male" required>
+<label for="html">Male</label>
+<input type="radio" id="css" name="gender"  value="Female" required>
+<label for="css">Female</label>
+
+
+		<p>Height (in cm):-</p>
+
+		<input type="number" placeholder="Enter Your Height" name ="height" value="" required>
+
+		<p>Weight (in kg):-</p>
+
+		<input type="number" placeholder="Enter Your Weight"  name ="weight" value="" required>
+		<br>
+
+		<br>
+
+		<button value="submit	">Calculate</button>
+
+	
+		</form>
+		
+	</div>
+</body>
+
+</html>
